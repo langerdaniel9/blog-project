@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text.css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
@@ -15,20 +15,49 @@
 
 <header>
     <div class="header-main">
-        <div class="header-main-1">
+        <a href="#home" class="header-button header-main-1">
             Home
-        </div>
-        <div class="header-main-2">
+        </a>
+        <a href="#blog" class="header-button header-main-2">
             Blog
-        </div>
-        <div class="header-main-3">
-            
-        </div>
+        </a>
+        <a class="header-button header-main-3" id="button">
+            Button
+        </a>
     </div>
 </header>
 
-<div class="main">
+<div class="button-popup" id="popup">
+    <div class="button-popup-text">Congrats, you clicked a button!</div>
+    <div class="button-popup-close" id="close">&#x2716</div>
+    <div class="button-popup-image">
+        <img class="button-popup-image-img" src="/img/thumbsup.jpg" alt="thumbs up">
+    </div>
+    <div class="button-popup-text-2">This is Jeff. He is proud of you.</div>
+</div>
 
+<div class="main">
+    <div class="main-content main-content-1">
+        <div class="top-text main-content-1-top">
+            I dont know what to put here
+        </div>
+        <div class="main-text main-content-1-text">
+            Like seriously, i have no clue. I cannot think of a single thing to put as a blog post. And this is only the first post. I need 2 more of these. what am i supposed to do here? uhhhhh, think, think..  Yea i still got nothing, i guess im just gonna find some copy pasta and put it in for the other two, cause i am genuinely lost as to what to put. And now i gotta find an image  to put here. uhhhhh. I think ill just put a question mark honestly. Might as well. 
+        </div>
+        <div class="main-image main-content-1-image">
+            <img src="/img/bridge.jpg" alt="bridge"> 
+        </div>
+    </div>
+    <div class="main-content main-content-2">
+        <div class="top-text main-content-2-top"></div>
+        <div class="main-text main-content-2-text"></div>
+        <div class="main-image main-content-2-image"></div>
+    </div>
+    <div class="main-content main-content-3">
+        <div class="top-text main-content-3-top"></div>
+        <div class="main-text main-content-3-text"></div>
+        <div class="main-image main-content-3-image"></div>
+    </div>
 </div>
 
 <footer>
@@ -40,5 +69,20 @@
 
 </body>
 
+
+<script>
+
+var button = document.getElementById("button");
+var popup = document.getElementById("popup");
+var close = document.getElementById("close");
+
+button.onclick = function(){
+    popup.style.display="block";
+}
+close.onclick = function(){
+    popup.style.display="none";
+}
+
+</script>
 
 </html>
