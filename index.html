@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="doc" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Odibee+Sans&display=swap" rel="stylesheet">
 
 </head>
 
@@ -18,7 +19,7 @@
         <a href="#home" class="header-button header-main-1">
             Home
         </a>
-        <a href="#blog" class="header-button header-main-2">
+        <a href="#blog" class="active header-button header-main-2">
             Blog
         </a>
         <a class="header-button header-main-3" id="button">
@@ -36,7 +37,7 @@
     <div class="button-popup-text-2">This is Jeff. He is proud of you.</div>
 </div>
 
-<div class="popup-blur"></div>
+<div class="popup-blur" id="blur"></div>
 
 <div class="main">
     <div class="main-content main-content-1">
@@ -44,21 +45,38 @@
             I dont know what to put here
         </div>
         <div class="main-text main-content-1-text">
-            Like seriously, i have no clue. I cannot think of a single thing to put as a blog post. And this is only the first post. I need 2 more of these. what am i supposed to do here? uhhhhh, think, think..  Yea i still got nothing, i guess im just gonna find some copy pasta and put it in for the other two, cause i am genuinely lost as to what to put. And now i gotta find an image  to put here. uhhhhh. I think ill just put a question mark honestly. Might as well. 
+            Like seriously, i have no clue. I cannot think of a single thing to put as a blog post. And this is only the first post. I need 2 more of these. what am i supposed to do here? uhhhhh, think, think.. Yea i still got nothing, i guess im just gonna find some copy pasta and put it in for the other two, cause i am genuinely lost as to what to put. And now i gotta find an image to put here. uhhhhh. I think ill just put a question mark honestly. Might as well. 
         </div>
         <div class="main-image main-content-1-image">
-            <img src="/img/question.jpg" alt="question mark"> 
+            <img class="main-image-image image-1" src="/img/question.jpg" alt="question mark"> 
         </div>
+        <button class="more-button more-button-1">Read More</button>
     </div>
+
     <div class="main-content main-content-2">
-        <div class="top-text main-content-2-top"></div>
-        <div class="main-text main-content-2-text"></div>
-        <div class="main-image main-content-2-image"></div>
+        <div class="top-text main-content-2-top">
+            Get Ready, Set, Go.
+        </div>
+        <div class="main-text main-content-2-text">
+            The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. [beep] A single lap should be completed each time you hear this sound. [ding] Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start.
+        </div>
+        <div class="main-image main-content-2-image">
+            <img class="main-image-image image-2" src="/img/fitnessgram.jpg" alt="question mark"> 
+        </div>
+        <button class="more-button more-button-2">Read More</button>
     </div>
+
     <div class="main-content main-content-3">
-        <div class="top-text main-content-3-top"></div>
-        <div class="main-text main-content-3-text"></div>
-        <div class="main-image main-content-3-image"></div>
+        <div class="top-text main-content-3-top">
+            I have run out of options
+        </div>
+        <div class="main-text main-content-3-text">
+            The only thing i have left is some random programming meme i definetely did not steal from reddit. I would never do that. Ever. I dont know why you think i stole it. I literally didnt. I DIDNT OKAY!... I kinda feel like u still think I stole it, and I dont appreciate that. Its kind of hurtful that you think so little of me. Okay you know what. Fine. FINE! FINE OK?? I stole it. I admit to the crime. I stole it and didnt think twice. Are you happy now? I hope you are happy.
+        </div>
+        <div class="main-image main-content-3-image">
+            <img class="main-image-image image-2" src="/img/meem.png" alt="meem"> 
+        </div>
+        <button class="more-button more-button-3">Read More</button>
     </div>
 </div>
 
@@ -77,12 +95,18 @@
 var button = document.getElementById("button");
 var popup = document.getElementById("popup");
 var close = document.getElementById("close");
+var blur = document.getElementById("blur");
+var doc = document.getElementById("doc");
 
 button.onclick = function(){
     popup.style.display="block";
+    blur.style.display="block";
+    doc.style.overflow="hidden";
 }
 close.onclick = function(){
     popup.style.display="none";
+    blur.style.display="none";
+    doc.style.overflow="auto";
 }
 
 </script>

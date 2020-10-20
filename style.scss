@@ -1,6 +1,4 @@
-$primary: #1c110a;
-$secondary: #50a2a7;
-$background: #e4d6a7;
+@import "_variables.scss";
 
 html,
 body {
@@ -10,10 +8,19 @@ body {
   box-sizing: border-box;
   font-size: 62.5%;
   background-color: $background;
+  font-family: $font2;
 }
 
+header {
+  font-family: $font1;
+  text-decoration: underline;
+}
+
+a.active {
+  color: $secondary;
+}
 .header-button {
-  font-size: 3rem;
+  font-size: 4rem;
   width: calc(10 / 3%);
   color: black;
   text-decoration: none;
@@ -21,6 +28,7 @@ body {
   padding: 1rem;
   cursor: pointer;
 }
+
 .header-main {
   padding: 0;
   margin: 0 auto;
@@ -38,22 +46,22 @@ body {
   left: calc(50% - 17.5vw);
   top: calc(50% - 25vh);
   width: 35vw;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 8px;
   text-align: center;
   z-index: 3;
-  font-size: 2rem;
+  font-size: 3rem;
+  padding: 1.5rem;
   background-color: $background;
 }
 
 .popup-blur {
   position: absolute;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   z-index: 2;
-  background: red;
-  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.5);
   display: none;
 }
 
@@ -74,33 +82,90 @@ body {
 }
 
 footer {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
-  padding: 3rem;
+  padding-bottom: 3rem;
 }
 
 .top-text {
-  font-size: 3.5rem;
+  font-size: 4rem;
   text-align: center;
 }
 
 .main {
-  margin-top: 15vh;
+  margin-top: 12vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-text {
-  font-size: 1.8rem;
+  font-size: 2.3rem;
 }
 
 .main-content {
   width: 70vw;
   margin: auto;
   padding: 2rem;
-  border: 1px solid black;
-  border-radius: 2px;
+  border: 2px solid $primary;
+  border-radius: 4rem;
+  text-align: center;
+  margin-bottom: 10vh;
+  box-shadow: 8px 10px 12px $redish, 12px 16px 8px rgba($redish, 0.6),
+    -6px -10px 12px $blueish;
+}
+
+.main-content-1,
+.main-content-2 {
+  flex-shrink: 1;
 }
 
 .main-text {
   margin-top: 12px;
   margin-bottom: 20px;
+}
+
+.main-image-image {
+  max-width: 50rem;
+  outline: 2px solid $primary;
+}
+
+.more-button {
+  margin-top: 40px;
+  font-size: 2.6rem;
+  border: 2px solid #1c110a;
+  padding: 0.6rem 1.8rem;
+  border-radius: 3rem;
+  background-color: #50a2a7;
+  cursor: pointer;
+  font-family: "Odibee Sans", cursive;
+  position: relative;
+  overflow: hidden;
+}
+
+.more-button:focus {
+  outline: none;
+}
+
+.more-button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 100%;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.more-button:active::after {
+  width: 200px;
+  height: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-image-image {
+    max-width: 65vw;
+  }
 }
