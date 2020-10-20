@@ -1,4 +1,6 @@
-@import "_variables.scss";
+$primary: #1c110a;
+$secondary: #50a2a7;
+$background: #e4d6a7;
 
 html,
 body {
@@ -7,6 +9,7 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 62.5%;
+  background-color: $background;
 }
 
 .header-button {
@@ -22,13 +25,11 @@ body {
   padding: 0;
   margin: 0 auto;
   height: 6vh;
-  width: 100vw;
   display: flex;
   justify-content: space-evenly;
 }
 
 .header-main-2 {
-  background-color: lightblue;
 }
 
 .button-popup {
@@ -40,8 +41,20 @@ body {
   border: 1px solid black;
   border-radius: 8px;
   text-align: center;
-  z-index: 2;
+  z-index: 3;
   font-size: 2rem;
+  background-color: $background;
+}
+
+.popup-blur {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background: red;
+  background-blend-mode: darken;
+  display: none;
 }
 
 .button-popup-text {
@@ -71,6 +84,10 @@ footer {
   text-align: center;
 }
 
+.main {
+  margin-top: 15vh;
+}
+
 .main-text {
   font-size: 1.8rem;
 }
@@ -81,4 +98,9 @@ footer {
   padding: 2rem;
   border: 1px solid black;
   border-radius: 2px;
+}
+
+.main-text {
+  margin-top: 12px;
+  margin-bottom: 20px;
 }
