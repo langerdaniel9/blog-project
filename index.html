@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>blog</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Odibee+Sans&display=swap" rel="stylesheet">
 
@@ -22,22 +22,24 @@
         <a href="#blog" class="active header-button header-main-2">
             Blog
         </a>
-        <a class="header-button header-main-3" id="button">
+        <a href="#jeff" class="header-button header-main-3">
             Button
         </a>
     </div>
 </header>
 
-<div class="button-popup" id="popup">
-    <div class="button-popup-text">Congrats, you clicked a button!</div>
-    <div class="button-popup-close" id="close">&#x2716</div>
-    <div class="button-popup-image">
-        <img class="button-popup-image-img" src="/img/thumbsup.jpg" alt="thumbs up">
+
+<div class="button-popup" id="jeff">
+    <a href="#" class="close"></a>
+    <div class="popup-button-content">
+        <div class="button-popup-text">Congrats, you clicked a button!</div>
+        <div class="button-popup-image">
+            <img class="button-popup-image-img" src="img/thumbsup.jpg" alt="thumbs up">
+        </div>
+        <div class="button-popup-text-2">This is Jeff. He is proud of you.</div>
     </div>
-    <div class="button-popup-text-2">This is Jeff. He is proud of you.</div>
 </div>
 
-<div class="popup-blur" id="blur"></div>
 
 <div class="main">
     <div class="main-content main-content-1">
@@ -90,25 +92,5 @@
 </body>
 
 
-<script>
-
-var button = document.getElementById("button");
-var popup = document.getElementById("popup");
-var close = document.getElementById("close");
-var blur = document.getElementById("blur");
-var doc = document.getElementById("doc");
-
-button.onclick = function(){
-    popup.style.display="block";
-    blur.style.display="block";
-    doc.style.overflow="hidden";
-}
-close.onclick = function(){
-    popup.style.display="none";
-    blur.style.display="none";
-    doc.style.overflow="auto";
-}
-
-</script>
 
 </html>
